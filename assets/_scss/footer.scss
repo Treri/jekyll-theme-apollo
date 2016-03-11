@@ -14,6 +14,19 @@
             background-color: #22bd77;
         }
     }
+    .prev-disable, .next-disable{
+        display: inline-block;
+        margin: 0 4px;
+        padding: 4px 12px;
+        border-radius: 4px;
+        border-bottom: 4px solid #959A98;
+        font-size: 14px;
+        color: #fff;
+        background-color: #B1B5B3;
+        // &:hover {
+        //     background-color: #B1B5B3;
+        // }
+    }
 }
 
 .ds-thread,

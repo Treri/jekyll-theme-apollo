@@ -15,14 +15,16 @@ layout: default
     </li>
     {% endfor %}
   </ul>
-  {% if paginator.total_pages > 1 %}
   <div class="paginator">
     {% if paginator.previous_page %}
     <a href="{{ site.url | append: site.baseurl }}{{ paginator.previous_page_path }}" class="prev">PREV</a>
+    {% else %}
+    <span class="prev-disable">PREV</span>
     {% endif %}
     {% if paginator.next_page %}
     <a href="{{ site.url | append: site.baseurl }}{{ paginator.next_page_path }}" class="prev">NEXT</a>
+    {% else %}
+    <span class="next-disable">NEXT</span>
     {% endif %}
   </div>
-  {% endif %}
 </section>
