@@ -15,6 +15,7 @@ layout: default
     </li>
     {% endfor %}
   </ul>
+  {% if paginator.total_pages > 1 %}
   <div class="paginator">
     {% if paginator.previous_page %}
     <a href="{{ site.url | append: site.baseurl }}{{ paginator.previous_page_path }}" class="prev">PREV</a>
@@ -23,4 +24,5 @@ layout: default
     <a href="{{ site.url | append: site.baseurl }}{{ paginator.next_page_path }}" class="prev">NEXT</a>
     {% endif %}
   </div>
+  {% endif %}
 </section>
