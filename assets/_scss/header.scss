@@ -1,0 +1,32 @@
+header {
+    // height: 60px;
+
+    .logo-link {
+        float: left;
+    }
+
+    .nav {
+        float: right;
+        left: 80px;
+    }
+
+    .logo-link img {
+        height: 60px;
+    }
+
+    .logo-link h1 {
+        height: 60px;
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 2.7em;
+    }
+
+    .nav-list-item {
+        display: inline-block;
+        padding: 19px  10px ;
+        a {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+    }
+}

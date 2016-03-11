@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<section class="container">
+  <div class="post">
+    <article class="post-block">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <div class="post-time">{{ page.date | date_to_utc | date: '%b %d, %Y' }}</div>
+      <div class="post-content">{{ content }}</div>
+    </article>
+    <div class="paginator">
+      {% if page.previous %}
+      <a href="{{ site.url | append: site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.title }}" class="prev">PREV</a>
+      {% endif %}
+      {% if page.next %}
+      <a href="{{ site.url | append: site.baseurl }}{{ page.next.url }}" title="{{ page.next.title }}" class="prev">NEXT</a>
+      {% endif %}
+    </div>
+  </div>
+
+  {% include comments %}
+</section>

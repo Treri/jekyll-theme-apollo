@@ -1,0 +1,12 @@
+{% if jekyll.environment == 'production' and site.apollo.comments.provider %}
+  {% if page.comments %}
+
+<div id="comments">
+{% case site.apollo.comments.provider %}
+{% when "duoshuo" %}
+  {% include comments-providers/duoshuo %}
+{% endcase %}
+</div>
+
+  {% endif %}
+{% endif %}

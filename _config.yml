@@ -1,0 +1,134 @@
+# Where things are
+source: .
+destination: ./_site
+plugins_dir: ./_plugins
+layouts_dir: ./_layouts
+data_dir: ./_data
+includes_dir: ./_includes
+
+sass:
+  sass_dir: assets/_scss
+  style: compressed
+
+# this config will lead github pages blog(jekyll 3.0.3) generate no rendered posts
+# so comment out this until github used jekyll updated
+# collections: null
+
+# Handling Reading
+safe: false
+include: [".htaccess"]
+exclude: []
+keep_files: [".git", ".svn"]
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future: true
+unpublished: false
+
+# Plugins
+whitelist: []
+gems:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+# excerpt_separator: "<!--more-->"
+excerpt_separator: ""
+incremental: false
+
+# Serving
+detach: false
+port: 4000
+host: 127.0.0.1
+baseurl: "" # does not include hostname
+
+# Outputting
+permalink: /:year/:month/:title.html
+paginate: 4
+paginate_path: /page:num
+timezone: Asia/Shanghai
+
+feed:
+  path: feed.xml
+
+quiet: false
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      comments: true
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: pages   # limit to posts
+    values:
+      comments: false
+
+# Markdown Processors
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+  coderay:
+    coderay_wrap: div
+    coderay_line_numbers: inline
+    coderay_line_number_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: style
+
+#apollo configs
+apollo:
+  begin: 2011
+
+  googlefonts: false
+
+  # comments provider
+  comments:
+    provider: duoshuo
+    duoshuo:
+      short_name: short_name
+
+  archives_path: /archives.html
+  contact_path: /contact.html
+  links_path: /links.html
+  tags_path: /tags.html
+
+  #菜单配置
+  navs:
+    - text: HOME
+      url: /index.html
+    - text: ARCHIVES
+      url: /archives.html
+    - text: TAGS
+      url: /tags.html
+    - text: ABOUT
+      url: /contact.html
+    - text: GITHUB
+      url: https://github.com/Treri/jekyll-theme-apollo
+
+#站点基础配置
+title: apollo
+subTitle: Just another Jekyll blog.
+description: A jekyll port of hexo theme apollo
+keywords: jekyll theme apollo
+url: http://localhost:4000
+
+author:
+  name: Treri

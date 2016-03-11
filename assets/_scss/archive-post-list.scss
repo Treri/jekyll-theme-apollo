@@ -1,0 +1,29 @@
+.archive {
+    max-width: 500px;
+    margin: 2em auto;
+    .post-item {
+        padding: 2px 0 0 50px;
+
+    }
+    .post-time,
+    .post-title-link {
+        font-size: 1rem;
+    }
+    .post-title-link {
+        color: #42b983;
+    }
+    .post-time {
+        display: inline-block;
+        width: 100px;
+        color: #7f8c8d;
+    }
+}
+
+.tag-cloud{
+    margin-top: 2em;
+}
+
+.tag-cloud-item{
+    font-size: 1.2em;
+    margin: 0 5px;
+}

@@ -1,0 +1,24 @@
+---
+layout: archives
+title: 文章标签
+---
+
+<div class="tag-cloud">
+{% for tag in site.tags %}
+<a class="tag-cloud-item" href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+{% endfor %}
+</div>
+
+{% if site.tags.size %}
+  <div class="archive">
+    {% for tag in site.tags %}
+    <h2 class="archive" id="{{ tag[0] }}">{{ tag[0] }}</h2>
+      {% for post in tag[1] %}
+      <div class="post-item">
+        <div class="post-time">{{ post.date | date: "%b %d, %Y" }}</div>
+        <a class="post-title-link" href="{{ site.url | append: site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+      </div>
+      {% endfor %}
+    {% endfor %}
+  </div>
+{% endif %}

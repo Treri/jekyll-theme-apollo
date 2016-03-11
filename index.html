@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<section class="container">
+  <ul class="home post-list">
+    {% for post in paginator.posts %}
+    <li class="post-list-item">
+      <article class="post-block">
+        <h2 class="post-title">
+          <a href="{{ site.url | append: site.baseurl }}{{ post.url }}" class="post-title-link">{{ post.title }}</a>
+        </h2>
+        <div class="post-time">{{ post.date | date_to_utc | date: '%b %d, %Y' }}</div>
+        <div class="post-content">{{ post.content }}</div>
+      </article>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="paginator">
+    {% if paginator.previous_page %}
+    <a href="{{ site.url | append: site.baseurl }}{{ paginator.previous_page_path }}" class="prev">PREV</a>
+    {% endif %}
+    {% if paginator.next_page %}
+    <a href="{{ site.url | append: site.baseurl }}{{ paginator.next_page_path }}" class="prev">NEXT</a>
+    {% endif %}
+  </div>
+</section>
